@@ -47,8 +47,30 @@
     modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
     error: function (err) {
       alert(err.toString());
-    }
+    },
+      editable: function (node) {
+        // node is an object like:
+        //   {
+        //     field: 'FIELD',
+        //     value: 'VALUE',
+        //     path: ['PATH', 'TO', 'NODE']
+        //   }
+        // this sets which fields are editable or not
+        switch (node.field) {
+          case '@id':
+            return false;
+          case '@context':
+            return false;
+          case '@type':
+            return false;
+
+          default:
+            return true;
+        }
+      }
   };
+
+
 
   // sample JSON to load automatically
   var json = {
