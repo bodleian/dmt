@@ -115,7 +115,7 @@
 .jsoneditor div.tree button:focus {
   /* TODO: nice outline for buttons with focus
   outline: #97B0F8 solid 2px;
-  box-shadow: 0 0 8px #97B0F8;
+  box-shadow: 0 0 8px #97B0F8; was changed to CCC //mmk
   */
   background-color: #f5f5f5;
   outline: #e5e5e5 solid 1px;
@@ -128,7 +128,7 @@
 
 .jsoneditor {
   color: #1A1A1A;
-  border: 1px solid #97B0F8;
+  border: 1px solid #ccc;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -452,8 +452,8 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #1A1A1A;
-  background-color: #D5DDF6;
-  border-bottom: 1px solid #97B0F8;
+  background-color: #EDEDED; /* was #D5DDF6 mmk */
+  border-bottom: 1px solid #ccc;
 }
 
 .jsoneditor .menu button {
@@ -530,7 +530,7 @@
 .jsoneditor .menu a {
   font-family: arial, sans-serif;
   font-size: 10pt;
-  color: #97B0F8;
+  color: #ccc;
   vertical-align: middle;
 }
 
@@ -563,7 +563,7 @@
 }
 
 .jsoneditor .search .frame {
-  border: 1px solid #97B0F8;
+  border: 1px solid #ccc;
   background-color: white;
   padding: 0 2px;
   margin: 0;
@@ -622,4 +622,49 @@
 
 .jsoneditor .search button.previous:hover {
   background-position: -148px -49px;
+}
+
+/* extra styles for DMT */
+#auto {
+    margin: -40px 0px -24px;
+    padding: 40px 0px 24px;
+    box-sizing: border-box;
+}
+#auto, #contents {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#jsoneditor {
+    float: left;
+    padding: 15px 0px 15px 15px;
+}
+#jsoneditor, #splitter, #canvaseditor {
+    height: 100%;
+    box-sizing: border-box;
+}
+#jsoneditor, #canvaseditor {
+    width: 400px;
+    box-sizing: border-box;
+}
+
+#canvaseditor {
+    float: left;
+    padding: 15px 15px 15px 0px;
+}
+
+#splitter {
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#splitter #drag {
+    font-size: 32px;
+    color: #D3D3D3;
+    border-radius: 3px;
+    min-width: 24px;
+    cursor: col-resize;
 }

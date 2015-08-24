@@ -15,7 +15,7 @@
       font: 11pt sans-serif;
     }
       h1, h1, h3, h4, h5, h6, p {font-family: 'Slabo 27px', serif;}
-    #jsoneditor {
+    #jsoneditor, #canvaseditor{
       width: 100%;
       height: 100%;
     }
@@ -23,13 +23,13 @@
 </head>
 <body>
 <h1>DMT Online Manuscript Editor</h1>
-<h2>Load and save JSON documents</h2>
-<p>
+<h2>Load a Manuscript manifest (in JSON), edit its fields, reorder (using the drag and drop) and save file</h2>
+<!--<p>
   This examples uses HTML5 to load/save local files.
   Powered by <a href="http://bgrins.github.io/filereader.js/">FileReader.js</a> and
   <a href="https://github.com/eligrey/FileSaver.js">FileSaver.js</a>.<br>
   Only supported on modern browsers (Chrome, FireFox, IE10+, Safari 6.1+, Opera 15+).
-</p>
+</p>-->
 <p>
   Load a JSON document: <input type="file" id="loadDocument" value="Load"/>
 </p>
@@ -37,11 +37,29 @@
   Save a JSON document: <input type="button" id="saveDocument" value="Save" />
 </p>
 
-<div id="jsoneditor"></div>
+<!-- <div id="jsoneditor"></div> -->
+
+<div id="auto">
+
+  <div id="contents">
+    <div id="jsoneditor"></div>
+<!--
+    <div id="splitter">
+     <div class="" style="height: 373px; line-height: 373px;" title="Drag left or right to change the width of the panels" id="drag">...</div>
+    </div>
+
+    <div id="canvaseditor"></div>
+
+-->
+  </div>
+</div>
+
 
 <script>
   // creating new container 
   var container = document.getElementById('jsoneditor');
+
+  // var canvas_container = document.getElementById('canvaseditor');
 
   // options for viewing document 
   var options = {
@@ -88,6 +106,9 @@
  // create the editor
   var editor = new JSONEditor(container, options, json);
 
+
+ // create the editor
+ // var editor2 = new JSONEditor(canvas_container);
 
  
 
