@@ -7,5 +7,7 @@ DMT online manuscript editor is a web-based tool to view, edit and format digita
 
 ## Note
 
-At the moment I'm working on the DMT online editor that is based on the [JSON Editor](https://github.com/josdejong/jsoneditor). More updates coming soon.
+At the moment I'm getting to know [Manifesto](https://github.com/UniversalViewer/manifesto) and the DMT editor might take a turn. The current code is based on the [JSON Editor](https://github.com/josdejong/jsoneditor). 
+
+More updates coming soon.
 
