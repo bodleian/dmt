@@ -23,13 +23,16 @@
 </head>
 <body>
 <h1>DMT Online Manuscript Editor</h1>
-<h2>Load a Manuscript manifest (in JSON), edit its fields, reorder (using the drag and drop) and save file</h2>
+<h2>What it does:<br>
+Loads a Manuscript manifest (in JSON) from local files, edit its fields (if they are not locked), reorder (using the drag and drop handle - the dots) and save file locally.</h2>
+<p>To test, save a json file from our digital.bodleian collection then open in the DMT tool to see its strucrure (Shortcut: save <a href="http://iiif.bodleian.ox.ac.uk/iiif/manifest/9e8020d0-de39-476d-8205-6f009c0b31c9.json" target="_blank">this json</a> file locally then open in DMT)</p>
 <!--<p>
   This examples uses HTML5 to load/save local files.
   Powered by <a href="http://bgrins.github.io/filereader.js/">FileReader.js</a> and
   <a href="https://github.com/eligrey/FileSaver.js">FileSaver.js</a>.<br>
   Only supported on modern browsers (Chrome, FireFox, IE10+, Safari 6.1+, Opera 15+).
 </p>-->
+<hr>
 <p>
   Load a JSON document: <input type="file" id="loadDocument" value="Load"/>
 </p>
@@ -111,6 +114,27 @@
  // var editor2 = new JSONEditor(canvas_container);
 
  
+ //open from URL
+ function getJSONP(url, success) {
+
+    var ud = '_' + +new Date,
+        script = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0] 
+               || document.documentElement;
+
+    window[ud] = function(data) {
+        head.removeChild(script);
+        success && success(data);
+    };
+
+    script.src = url.replace('callback=?', 'callback=' + ud);
+    head.appendChild(script);
+
+}
+
+getJSONP('http://iiif.bodleian.ox.ac.uk/iiif/manifest/e32a277e-91e2-4a6d-8ba6-cc4bad230410.json', function(data){
+    console.log(data);
+});  
 
 
   // Load a JSON document
