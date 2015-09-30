@@ -1,5 +1,5 @@
 # Digital Manuscript Toolkit - online manuscript editor
-https://github.com/monicams/dmt
+https://bodleian.github.com/dmt
 
 ## Description
 
