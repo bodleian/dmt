@@ -1,0 +1,40 @@
+{
+  "name": "manifesto",
+  "version": "0.1.13",
+  "homepage": "https://github.com/edsilv/manifesto",
+  "authors": [
+    "edsilv <e.silverton@gmail.com>"
+  ],
+  "description": "IIIF Presentation API utility library for client and server",
+  "main": "/dist/client/manifesto.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "IIIF"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "tasks",
+    "typings"
+  ],
+  "dependencies": {
+    "http-status-codes": "edsilv/http-status-codes#~0.0.2",
+    "jmespath.js": "edsilv/jmespath.js#~0.12.5"
+  },
+  "_release": "0.1.13",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.13",
+    "commit": "0f05bfdd72179dc2774669c7b00001d8d1675a58"
+  },
+  "_source": "git://github.com/universalviewer/manifesto.git",
+  "_target": "~0.1.13",
+  "_originalSource": "manifesto"
+}

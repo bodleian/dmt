@@ -1,33 +1,22 @@
 {
-  "name": "jsoneditor",
-  "version": "4.2.1",
-  "description": "A web-based tool to view, edit and format JSON",
-  "tags": [
-    "json",
-    "editor",
-    "viewer",
-    "formatter"
-  ],
-  "homepage": "http://jsoneditoronline.org/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/josdejong/jsoneditor.git"
-  },
-  "main": [
-    "./dist/jsoneditor.min.js",
-    "./dist/jsoneditor.min.css"
-  ],
-  "bugs": "https://github.com/josdejong/jsoneditor/issues",
-  "ignore": [
-    "misc",
-    "node_modules",
-    "test",
-    "tools",
-    "gulpfile.js",
-    "npm-debug.log",
-    ".idea",
-    ".npmignore",
-    ".gitignore"
-  ],
-  "dependencies": {}
+    "name": "manifesto-handlebars-demo",
+    "version": "0.0.2",
+    "homepage": "https://github.com/edsilv/manifesto-site",
+    "authors": [
+        "edsilv <e.silverton@gmail.com>"
+    ],
+    "description": "Test manifesto",
+    "main": "app.js",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "manifesto": "~0.1.13",
+        "jquery": "~2.1.4"
+    }
 }

@@ -1,0 +1,53 @@
+<h1>{{title}}</h1>
+
+<div>
+    <!-- load example from digital.bodleian if user doesn't input any -->
+    <input id="manifest" type="text" placeholder="Manifest Uri" value="http://iiif.bodleian.ox.ac.uk/iiif/manifest/33ce3177-0fdc-44fd-8325-24a298322023.json" />
+    <button id="load-client-btn">Load URL</button>
+    <!--<button id="load-server-btn">Load (Server)</button>-->
+    <br><br>
+</div>
+
+<div id="manifest-txt">
+
+</div>
+
+<script>
+    $(function() {
+
+        $('#load-client-btn').on('click', function(e) {
+            e.preventDefault();
+            var url = $('#manifest').val();
+            manifesto.loadManifest(url).then(function(manifest){
+                manifest = manifesto.create(manifest);
+                $('#manifest-txt').html(
+                    
+                    '<h1>'+manifest.getLabel()+'</h1>'+
+                    '<p><strong>Id: </strong>'+ manifest.getProperty('@id') +'</p>' +
+
+                    '<p><strong>Type: </strong>'+ manifest.getProperty('@type') +'</p>' +
+                    '<p><strong>Format: </strong>'+ manifest.getProperty('format') +'</p>' +
+                    '<p><strong>Subject: </strong>'+ manifest.getProperty('height') +'</p>' +
+                    '<p><strong>Coverage: </strong>'+ manifest.getProperty('width') +'</p>' +
+                    '<p><strong>Viewing Direction: </strong>'+ manifest.getProperty('viewingDirection') +'</p>' +
+                    '<p><strong>Viewing Hint: </strong>'+ manifest.getProperty('viewingHint') +'</p>' +
+                    '<p><strong>Description: </strong>'+ manifest.getProperty('description') +'</p>' +
+                    '<p><strong>Attribution: </strong>'+ manifest.getProperty('attribution') +'</p>' +
+                    '<p><strong>See Also: </strong>'+ manifest.getProperty('seeAlso') +'</p>' +
+                    '<p><strong>Canvases: </strong>'+ manifest.getProperty('canvases') +'</p>' 
+
+
+                );
+            });
+        });
+
+
+
+
+        $('#load-server-btn').on('click', function(e) {
+            e.preventDefault();
+            var manifestUri = $('#manifest').val();
+            window.location.href = "/load/" + encodeURIComponent(manifestUri);
+        });
+    });
+</script>
