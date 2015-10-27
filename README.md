@@ -1,7 +1,5 @@
 # Digital Manuscript Toolkit - online manuscript editor
-https://bodleian.github.com/dmt
 
-## Description
 
 DMT online manuscript editor is a web-based tool to view, edit and format digital manuscript manifests created in JSON format. This tool is part of a larger toolkit using IIIF: http://iiif.io, an image server and many other tools. More updates on this tool will be published later on the [DMT project blog](http://dmt.bodleian.ox.ac.uk) and on [my blog](http://monicams.com/blog)
 
@@ -11,7 +9,7 @@ DMT online manuscript editor is a web-based tool to view, edit and format digita
     bower install
     gulp serve
 
-    Point browser to http://localhost:3000/ and load a IIIF compliant manifest from any URL.
+Point browser to http://localhost:3000/ and load a IIIF compliant manifest from any URL.
 
 ## Note
 
