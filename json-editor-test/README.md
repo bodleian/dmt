@@ -1,9 +1,8 @@
-# Digital Manuscript Toolkit - online manuscript editor
-https://bodleian.github.com/dmt
+# Initial test 
 
 ## Description
 
-Test using [JSON Editor](https://github.com/josdejong/jsoneditor)for the manipulation of the manuscripts. This folder will exist temporarily for reference only.
+Test using [JSON Editor](https://github.com/josdejong/jsoneditor)for the manipulation of the manuscripts. The tool allows editing JSON value-pairs, and drag-and-drop of sequences/canvas (in textual way). This folder will exist temporarily for reference only.
 
 ## Note
 
